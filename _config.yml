@@ -25,6 +25,19 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+date_format: "%b %-d, %Y"
+
+header_pages:
+  - newsletter.html
+  - papers_i_read.md
+  - blog/index.html
+
+external_headers:
+  - link: https://github.com/decanus/research
+    title: Research
+
+include:
+  - blog
 
 # Build settings
 markdown: kramdown

@@ -1,0 +1,9 @@
+---
+layout: page
+title: Blog
+---
+{% assign posts_count = paginator.posts | size %}
+
+{% for post in paginator.posts %}
+    {% include post_snippet.html %}
+{% endfor %}

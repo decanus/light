@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% assign minutes = content | strip_html | number_of_words | divided_by: 180 %}
+{% if minutes == 0 %}
+{% assign minutes = 1 %}
+{% endif %}
+
+<main>
+
+    <article>
+        <header>
+            <p class="date"><small>{{ page.date | date: site.date_format }}</small></p>
+
+            <h2>{{ page.title }}</h2>
+
+            {% if page.summary %}
+                <p>
+                    {{ page.summary }}
+                </p>
+            {% endif %}
+
+            <p class="post-summary">
+                <small>
+                    {% if page.minutes %}
+                    {{ page.minutes }} {{ site.text.post.minute_read | default: "minute read" }}
+                    {% else %}
+                    {{ minutes }} {{ site.text.post.minute_read | default: "minute read" }}
+                    {% endif %}
+                    {% if page.newsletter %} - This post was originally published to my <a href="{{ page.newsletter }}">newsletter</a>.{% endif %}
+                </small>
+            </p>
+
+        </header>
+
+        {{ content }}
+
+    </article>
+
+</main>
