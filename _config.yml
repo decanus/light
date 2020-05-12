@@ -28,13 +28,14 @@ github_username:  jekyll
 date_format: "%b %-d, %Y"
 
 header_pages:
-  - newsletter.html
-  - papers_i_read.md
+  - about.markdown
   - blog/index.html
 
 external_headers:
-  - link: https://github.com/decanus/research
-    title: Research
+  - link: https://github.com/decanus/light
+    title: Github
+
+google_analytics:
 
 include:
   - blog

@@ -1,0 +1,23 @@
+{% if paginator.total_pages != 1 %}
+    <footer class="pagination">
+        <span>
+            {% if paginator.previous_page %}
+            {% if paginator.page == 2 %}
+                <a href="{{ "/blog" | relative_url }}">{{ site.text.pagination.newer | default: "Newer" }}</a>
+            {% else %}
+                <a href="{{ paginator.previous_page_path | relative_url }}">{{ site.text.pagination.newer | default: "Older" }}</a>
+            {% endif %}
+            {% else %}
+            <span class="disabled">{{ site.text.pagination.newer | default: "Newer" }}</span>
+            {% endif %}
+        </span>
+        <span>
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}">{{ site.text.pagination.older | default: "Older" }}</a>
+            {% else %}
+            <span class="disabled">{{ site.text.pagination.older | default: "Older" }}</span>
+            {% endif %}
+        </span>
+        <p>Page {{ paginator.page }} of {{ paginator.total_pages }}</p>
+    </footer>
+{% endif %}
