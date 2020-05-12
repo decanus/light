@@ -1,88 +1,11 @@
-.site-header {
-  padding-top: $space-1;
-  padding-bottom: $space-2;
-}
+header.header {
+  h1 {
+    display: inline;
+    padding-right: 1rem;
+  }
 
-.site-header a {
-  color: $header-color;
-  font-size: $h4;
-  font-weight: $header-font-weight;
-  background-image: none;
-}
-
-.site-header .site-title {
-  width: 100%;
-  text-align: left;
-  display: block;
-  font-size: $h2;
-  text-decoration: none;
-}
-
-.site-header .site-title .title {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 0.5rem
-}
-
-.site-header .header-image {
-  height: $h4;
-}
-
-.site-nav {
-  display: inline-block;
-  color: $nav-color;
-}
-
-.site-header nav a {
-  color: $nav-color;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.site-header nav a:hover,
-.site-header nav a:focus,
-.site-header nav a:active,
-.site-header nav a.nav-active:hover,
-.site-header nav a.nav-active:focus,
-.site-header nav a.nav-active:active {
-  white-space: nowrap;
-  color: $nav-link-color;
-  opacity: 1;
-  border-bottom: $nav-link-border-bottom;
-  text-decoration: none;
-}
-
-.site-header nav a.nav-active {
-  border-bottom: $nav-active-border-bottom;
-}
-
-.site-nav a + a {
-  margin-left: 0;
-}
-
-.site-nav a {
-  margin-right: 0.5rem;
-}
-
-.site-header a:hover,
-.posts .post a:hover .post-meta,
-.posts .post a:hover .post-title,
-.posts .post a:hover .post-summary {
-  opacity: 0.88;
-}
-
-.site-header {
-  text-align: center;
-}
-
-.site-header .site-nav {
-  text-align: center;
-}
-
-.social-icons-right a {
-  text-decoration: none;
-}
-
-.site-nav a+a {
-  margin-left: 0;
+  img {
+    margin-right: 0;
+    height: 1.25rem;
+  }
 }

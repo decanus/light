@@ -1,20 +1,20 @@
-{% assign page_paths = site.external_headers %}
-
-{% for page in page_paths %}
-<a class="nav-active" href="{{ page.link }}" target="_blank">{{ page.title }}</a>
-{% endfor %}
-
 {% assign default_paths = site.pages | map: "path" %}
 {% assign page_paths = site.header_pages | default: default_paths %}
 
 {% for path in page_paths %}
-    
-    {% assign item = site.pages | where: "path", path | first %}
-    
-    {% if item.short_title and page.short_title != "" %}
-        <a class="nav-active" href="{{ item.url | relative_url }}">{{ item.short_title }}</a>
-    {% elsif item.title and page.title == item.title or item.title %}
-        <a class="nav-active" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-    {% endif %}
-    
+
+{% assign item = site.pages | where: "path", path | first %}
+
+{% if item.short_title and page.short_title != "" %}
+<a href="{{ item.url | relative_url }}">{{ item.short_title }}</a>
+{% elsif item.title and page.title == item.title or item.title %}
+<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+{% endif %}
+
+{% endfor %}
+
+{% assign page_paths = site.external_headers %}
+
+{% for page in page_paths %}
+<a href="{{ page.link }}" target="_blank">{{ page.title }}</a>
 {% endfor %}

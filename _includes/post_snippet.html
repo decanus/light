@@ -1,4 +1,4 @@
-<article>
+<article class="post-snippet">
     <header>
         <a href="{{ post.url | relative_url }}">
             <h3>
@@ -10,7 +10,7 @@
     <footer>
         <nav>
             {% for tag in post.tags %}
-            <a href="/tag/{{ tag }}">{{ tag }}</a>
+            <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
             {% endfor %}
         </nav>
     </footer>

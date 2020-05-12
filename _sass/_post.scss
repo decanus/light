@@ -1,0 +1,11 @@
+.post {
+  header > p > img, > p img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+.post-snippet p {
+  margin-bottom: 0;
+}

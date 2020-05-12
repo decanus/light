@@ -1,32 +1,31 @@
-html {
-  font-size: $base-font-size;
+body {
+  font-family: $font-family;
+  line-height: $line-height;
+
 }
 
-abbr {
-  border-bottom: $abbr-border-bottom;
-  cursor: help;
+header h1 {
+  margin: 0 0 0.3em;
 }
 
-p {
-  color: #333;
-  line-height: 1.5;
+.post-summary {
+  color: gray;
 }
 
-small,
-.small {
-  font-size: 0.707rem;
+@media screen and (max-width: $viewport-small) {
+  html {
+    font-size: 16px;
+  }
 }
 
-sup {
-  position: relative;
-  vertical-align: middle;
-  top: -0.9ex;
+@media screen and (min-width: $viewport-medium) {
+  html {
+    font-size: 18px;
+  }
 }
 
-.footnotes p, .footnotes ol {
-  font-size: 0.707rem;
-}
-
-h1 {
-  margin-top: 1rem;
+@media screen and (min-width: $viewport-large) {
+  html {
+    font-size: 20px;
+  }
 }
