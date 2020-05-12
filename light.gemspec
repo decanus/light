@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name                    = "light"
-  spec.version                 = "0.7.0"
+  spec.version                 = "0.8.0"
   spec.authors                 = ["Dean Eigenmann"]
 
   spec.summary                 = %q{Simple theme}
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.metadata["plugin_type"] = "theme"
 
   spec.files                   = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r{^(assets|blog|_(data|includes|layouts|_sass)/|(LICENSE|README|CHANGELOG)((\.(txt|md|markdown)|$)))}i)
+    f.match(%r{^(blog|_(includes|layouts|_sass)/|(LICENSE|README|CHANGELOG)((\.(txt|md|markdown)|$)))}i)
   end
 
   spec.add_runtime_dependency "jekyll", ">= 3.7", "< 5.0"

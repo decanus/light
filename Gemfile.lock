@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    light (0.6.0)
+    light (0.8.0)
       jekyll (>= 3.7, < 5.0)
       jekyll-feed (~> 0.1)
       jekyll-gist (~> 1.5)
