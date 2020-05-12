@@ -1,5 +1,5 @@
 <header class="header">
-    <a href="/">
+    <a href="{{ page.url | absolute_url }}">
         <h1>{{ site.title }}</h1>
         {% if site.header_image %}
         <img src="{{ site.header_image }}" />
