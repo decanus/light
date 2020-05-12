@@ -1,0 +1,20 @@
+<div class="post">
+    <p class="post-meta">
+        {% if site.date_format %}
+        {{ post.date | date: site.date_format }}
+        {% else %}
+        {{ post.date | date: "%b %-d, %Y" }}
+        {% endif %}
+
+    </p>
+    <a href="{{ post.url | relative_url }}" class="post-link"><h3 class="h2 post-title">{{ post.title }}</h3>
+    </a>
+    <span class="post-summary">
+    {{ post.content | strip_html | truncatewords: 24 }}
+  </span>
+    <p class="tags small">
+        {% for tag in post.tags %}
+        <a href="/tag/{{ tag }}"><code class="highligher-rouge">{{ tag }}</code></a>&nbsp;
+        {% endfor %}
+    </p>
+</div>

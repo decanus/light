@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<h1 class="tag-title">{{ page.title }}</h1>
+
+{% if content %}
+
+<span class="tag-summary">{{ content }}</span>
+
+{% endif %}
+
+<div class="home">
+    <div class="posts">
+        {% for post in site.tags[page.tag] %}
+            {% include post_list.html %}
+        {% endfor %}
+    </div>
+</div>

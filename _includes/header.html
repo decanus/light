@@ -1,8 +1,23 @@
-<header class="header">
-    <a href="/">
-        <h1>{{ site.title }}</h1>
-    </a>
-    <nav>
+<header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <div>
+        <a href="{{ "/" | relative_url }}" class="site-title">
+        <div class="title">
+          {{ site.title }}
+        </div>
+        {% if site.header_image %}
+          <img src="{{ site.header_image }}" class="header-image"/>
+        {% endif %}
+        </a>
+      </div>
+
+      <nav class="site-nav left">
         {% include navigation.html %}
-    </nav>
+      </nav>
+      {% if site.show_social_icons %}
+        {% include social_links.html %}
+      {% endif %}
+    </div>
+  </div>
 </header>
