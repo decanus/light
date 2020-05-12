@@ -54,6 +54,11 @@ plugins:
   - jekyll-sitemap
   # https://github.com/jekyll/jekyll/issues/2938
 
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
 exclude:
   - Gemfile
   - Gemfile.lock
