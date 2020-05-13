@@ -2,9 +2,23 @@
   > a {
     color: black;
     text-decoration: none;
+    
+    &:hover {
+      opacity: 0.88
+    }
   }
 }
 
 .tag {
   font-size: .75rem;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+  
+  &:hover {
+    text-decoration: none;
+    color: gray;
+  }
 }
