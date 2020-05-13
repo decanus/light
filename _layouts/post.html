@@ -7,16 +7,18 @@ layout: default
 {% assign minutes = 1 %}
 {% endif %}
 
-<main>
+<main itemid="{{site.url}}{{page.url}}" itemscope itemtype="http://schema.org/Blog">
 
     <article class="post">
         <header>
-            <p class="date"><small>{{ page.date | date: site.date_format }}</small></p>
+            <p class="date" itemprop="datePublished" content="{{ page.date }}">
+                <small>{{ page.date | date: site.date_format }}</small>
+            </p>
 
-            <h2>{{ page.title }}</h2>
+            <h2 itemprop="headline">{{ page.title }}</h2>
 
             {% if page.summary %}
-                <p>
+                <p itemprop="description">
                     {{ page.summary }}
                 </p>
             {% endif %}
@@ -34,13 +36,15 @@ layout: default
 
             {% if page.image and page.hide_image == null %}
             <p>
-                <img src="{{ page.image }}" alt="{{ page.title }}">
+                <img src="{{ page.image }}" alt="{{ page.title }}" itemprop="image">
             </p>
             {% endif %}
 
         </header>
 
-        {{ content }}
+        <section itemprop="articleBody">
+            {{ content }}
+        </section>
 
         <footer>
             <nav>
